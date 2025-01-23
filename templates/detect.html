@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}
+<h1>Detect Medicinal Plant</h1>
+<form
+  action="{{ url_for('detect') }}"
+  method="post"
+  enctype="multipart/form-data"
+>
+  <input type="file" name="file" accept=".png, .jpg, .jpeg" required />
+  <button type="submit">Detect Medicinal Plant</button>
+</form>
+{% endblock %}

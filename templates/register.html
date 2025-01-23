@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %}
+<h1>Register</h1>
+<form id="register-form">
+  <input type="email" id="register-email" placeholder="Email" required />
+  <input
+    type="password"
+    id="register-password"
+    placeholder="Password"
+    required
+  />
+  <button type="submit">Register</button>
+</form>
+{% endblock %} {% block scripts %}
+<!-- Firebase App (core SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js"></script>
+
+<!-- Firebase Authentication -->
+<script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js"></script>
+
+<!-- Import the Firebase configuration -->
+<script
+  type="module"
+  src="{{ url_for('static', filename='firebase-config.js') }}"
+></script>
+
+<!-- Import the Authentication logic -->
+<script
+  type="module"
+  src="{{ url_for('static', filename='auth.js') }}"
+></script>
+{% endblock %}
